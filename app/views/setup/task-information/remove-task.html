@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Remove task
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+  <a class="govuk-back-link" href="task-info-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Remove task
+      </h1>
+
+
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Task ID
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-id'] | default('DWP6502') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task id </span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Task name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-name'] | default('Review safeguarding measures') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task name</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Domain
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-domain'] | default('Winter fuel') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task domain details</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Priority
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-priority'] | default('High') }}
+    </dd>
+
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task prority details</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-subject'] | default('Winter fuel') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task subject details</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+<br><br>
+<p class="govuk-heading-m" >Matching attributes</p>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Selected attributes
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['selected-attributes-task'] | default('Winter fuel') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> attribute information</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+<br><br>
+<p class="govuk-heading-m">Other details</p>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Notes
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-notes'] | default('No notes added') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task notes</span>
+      </a>
+    </dd>
+  </div>
+
+</dl>
+
+<br><br>
+<form class="form" action="/setup/task-information/remove-task" method="post">
+  <div class="govuk-form-group">
+
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+    <div id="changed-name-hint" class="govuk-hint">
+      <br>This will remove the attribute from the list permanently.
+    </div>
+    <div class="govuk-radios govuk-radios--inline">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="remove-attribute" name="remove-task" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="remove-task">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="remove-attribute-2" name="remove-task" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+  </div>
+
+<br>
+<button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+</form>
+    </div>
+  </div>
+
+{% endblock %}

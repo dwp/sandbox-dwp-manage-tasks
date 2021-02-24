@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  I can't do this task
+{% endblock %}
+
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    function validateForm() {
+      var x = document.forms["reason-form-2"]["reason-for-not-doing-task-2"].value;
+      var y = document.getElementById("error-summary-2");
+      var yy = document.getElementById("error-summary-2-2");
+      var reason_error = document.getElementById("no-reason-error-2");
+      var other_reason = document.getElementById("other-reason-required-2").value;
+      var reason_error_2 = document.getElementById("no-reason-error-2-2");
+      if (x == "") {
+        y.style.display="block";
+        reason_error.style.display="block";
+        $("#reason-options-2").addClass("govuk-form-group--error");
+        return false;
+      } else if ( x == " " && other_reason == "") {
+        y.style.display="none";
+        reason_error.style.display="none";
+        yy.style.display="block";
+        reason_error_2.style.display="block";
+        $("#reason-options-2").addClass("govuk-form-group--error");
+        $("#other-reason-required-2").addClass("govuk-textarea--error");
+        return false;
+      }
+    }
+
+  </script>
+
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div>
+      <a href="/index-attributes-agentinfo-task-done" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+      <br><br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="agent-landing">
+                My tasks
+              </a>
+            </li>
+
+            <li class="govuk-header__navigation-item ">
+              <a class="govuk-header__link" href="my-clearances">
+                My clearances
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="task-landing">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Why can't you do this task?</h1>
+
+      <form class="form " name="reason-form-2" action="agent-landing-success" onsubmit="return validateForm()" method="post">
+
+      <div class="govuk-form-group" id="reason-options-3">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <div id="contact-hint" class="govuk-hint">
+            Select one option.
+          </div>
+
+      <!-- Specific error block - Start -->
+
+      <span id="no-reason-error-2" class="govuk-error-message govuk-radios__conditional--hidden">
+          <span class="govuk-visually-hidden">Error:</span> Select reason for not doing task
+      </span>
+
+      <!-- Specific error block - End -->
+
+
+
+
+
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reason-1" name="reason-for-not-doing-task-3" type="radio" value="This task is not relavent to the team I work in " data-aria-controls="reason-for-not-doing-task-0">
+          <label class="govuk-label govuk-radios__label" for="reason-0">
+            This task is not relavent to the team I work in
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reason-1" name="reason-for-not-doing-task-3" type="radio" value="I don't have relevant experience or training" data-aria-controls="reason-for-not-doing-task-1">
+          <label class="govuk-label govuk-radios__label" for="reason-1">
+            I don't have relevant experience or training
+          </label>
+        </div>
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reason-2" name="reason-for-not-doing-task-3" type="radio" value="I don't have enough information to assess complexity of task" data-aria-controls="reason-for-not-doing-task-2">
+          <label class="govuk-label govuk-radios__label" for="reason-2">
+            I don't have enough information to assess complexity of task
+          </label>
+        </div>
+
+
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="reason-4" name="reason-for-not-doing-task-3" type="radio" value=" " data-aria-controls="reason-for-not-doing-task-4">
+          <label class="govuk-label govuk-radios__label" for="reason-4">
+            Other reason
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="reason-for-not-doing-task-4">
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="reason-5">
+              Enter reason
+            </label>
+
+            <!-- Field Error - Start -->
+            <span id="no-reason-error-2-2" class="govuk-error-message govuk-radios__conditional--hidden">
+                <span class="govuk-visually-hidden">Error:</span>Enter reason for not doing task
+            </span>
+            <!-- Field Error - End -->
+
+
+                <textarea class="govuk-textarea" id="other-reason-required-2" name="reason-for-not-doing-task-3" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

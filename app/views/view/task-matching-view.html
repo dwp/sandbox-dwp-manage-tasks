@@ -1,0 +1,136 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View task queue or task matching
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    function getDate () { var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    document.write(today);
+   }
+  </script>
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="/index-attributes-agentinfo-task-done">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">View task queue or task matching</a>
+  </li>
+
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        View task queue or task matching
+      </h1>
+      <div class="govuk-inset-text">
+      <p>Tasks matched with agents who can perform the task based on the attribute(s).</p>
+      </div>
+      <br>
+
+      <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" style="width: 35% !important;">Task name</th>
+      <th scope="col" class="govuk-table__header" style="width: 15% !important;">Priority</th>
+      <th scope="col" class="govuk-table__header" style="width: 25% !important;">Attribute(s)</th>
+      <th scope="col" class="govuk-table__header" style="width: 25% !important;">Agent(s) matched</th>
+
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Make payment</td>
+      <td class="govuk-table__cell">Very high</td>
+      <td class="govuk-table__cell">Specialist</td>
+      <td class="govuk-table__cell">Sam Smith <br> Lucius Tiberius</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Add new address</td>
+      <td class="govuk-table__cell">High</td>
+      <td class="govuk-table__cell">Specialist <br> Decision maker</td>
+      <td class="govuk-table__cell">Sam Smith <br> Lucius Tiberius <br> John Lee</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Verify address</td>
+      <td class="govuk-table__cell">High</td>
+      <td class="govuk-table__cell">Processing agent</td>
+      <td class="govuk-table__cell">Arthur Gernow<br> Paul James<br>James Hammersmith<br>John Lee<br>Lucius Tiberius </td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Add payment details</td>
+      <td class="govuk-table__cell">Medium</td>
+      <td class="govuk-table__cell">Decision maker <br> Team leader</td>
+      <td class="govuk-table__cell">Paul James <br>Sam Smith</td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Modify payment details</td>
+      <td class="govuk-table__cell">Low</td>
+      <td class="govuk-table__cell">Processing agent</td>
+      <td class="govuk-table__cell">Arthur Gernow<br> Paul James<br>James Hammersmith<br>John Lee<br>Lucius Tiberius </td>
+    </tr>
+
+  </tbody>
+</table>
+<br>
+
+<p><span class="govuk-heading-m">Note:</span>
+<strong>Task name: </strong>: Name of the task in the task queue<br>
+<strong>Priority </strong>: One of the task property used for task matching<br>
+<strong>Attributes </strong>: Attributes specified as a basic task matching criteria while creation of task and agent<br>
+<strong>Agent(s) matched</strong>: Agent(s) who can pick the task from the backend task queue</p>
+
+
+<br>
+<br>
+<a href="/index-attributes-agentinfo-task-done"><button class="govuk-button" data-module="govuk-button">Continue</button></a>
+    </div>
+  </div>
+
+{% endblock %}

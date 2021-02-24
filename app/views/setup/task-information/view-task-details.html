@@ -1,0 +1,164 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task details
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+  <a class="govuk-back-link" href="task-info-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Task details
+      </h1>
+
+
+      <dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Task ID
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-id'] | default('DWP6502') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task id </span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Task name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-name'] | default('Review safeguarding measures') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task name</span>
+      </a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Domain
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-domain'] | default('Winter fuel') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task domain details</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Priority
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-priority'] | default('High') }}
+    </dd>
+
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task subject details</span>
+      </a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Subject
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-subject'] | default('Winter fuel') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task subject details</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+<br><br>
+<p class="govuk-heading-m" >Matching attributes</p>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Selected agent attributes
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['selected-attributes-task'] | default('Winter fuel') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> attribute information</span>
+      </a>
+    </dd>
+  </div>
+</dl>
+<br><br>
+<p class="govuk-heading-m">Other details</p>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Notes
+    </dt>
+    <dd class="govuk-summary-list__value">
+      {{ data['task-notes'] | default('No notes added') }}
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task notes</span>
+      </a>
+    </dd>
+  </div>
+
+</dl>
+
+<br><br>
+<a href="task-info-list"><button class="govuk-button" data-module="govuk-button">Back to task information page</button></a>
+<br>
+<p><a href="remove-task">Remove this task </a></p>
+<br><br>
+    </div>
+  </div>
+
+{% endblock %}

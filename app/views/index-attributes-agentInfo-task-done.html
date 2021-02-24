@@ -1,0 +1,140 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DWP Manage tasks
+{% endblock %}
+
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4"><span class="govuk-caption-l">Sandpit version</span>DWP Manage tasks </h1>
+    <br>
+  </div>
+</div>
+
+
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+             Intial setup needed
+             <p class="govuk-hint">Setup to create attributes, agents and tasks for task matching </p>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/setup/attributes/agent-attributes-none" aria-describedby="eligibility-status">
+                  Agent attributes
+                </a>
+              </span>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/setup/agents/agents-list-none" aria-describedby="eligibility-status">
+                  Agents
+                </a>
+              </span>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/setup/task-information/task-info-list-none" aria-describedby="read-declaration-status">
+                  Tasks
+                </a>
+              </span>
+            </li>
+
+
+          </ul>
+        </li>
+
+
+        <li>
+          <h2 class="app-task-list__section">
+           Task matching
+           <p class="govuk-hint">A view of tasks matched with agents who can perform the task based on the attribute(s) provided </p>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="/view/task-matching-view" aria-describedby="company-information-status">
+                  View task queue or task matching
+                </a>
+              </span>
+            </li>
+
+          </ul>
+        </li>
+
+        <li>
+          <h2 class="app-task-list__section">
+            Example agent interface
+            <p class="govuk-hint">Frontend for agent to view, complete and manage their tasks </p>
+          </h2>
+
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+              <a href="/agent-frontends/agents-dm/select-agent" aria-describedby="company-information-status">
+              <span class="app-task-list__task-name">
+                For agents and decision makers
+              </span>
+              </a>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                  For managers and team leaders (TBC)
+
+              </span>
+            </li>
+
+          </ul>
+        </li>
+      </ol>
+    </div>
+  </div>
+
+
+{% endblock %}

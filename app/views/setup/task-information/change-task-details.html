@@ -1,0 +1,175 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Change task details
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+  <a class="govuk-back-link" href="task-info-list">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Change task details
+      </h1>
+
+      <form class="form" action="view-task-details" method="post">
+        <fieldset class="govuk-fieldset">
+
+          <br>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="task-id">
+              Enter task ID
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="task-id" name="task-id" type="text" value="{{ data['task-id'] | default('XXX XXX XXX') }}"></div>
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="task-name">
+            Enter task name
+          </label>
+          <p class="govuk-hint">For example 'Verify address' or 'Add new payment details' </p>
+
+          <input class="govuk-input" id="tasks-name" name="task-name" type="text" value="{{ data['task-name'] | default('Add address to claimant') }}"></div>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="task-domain">
+              Enter domain
+            </label>
+            <p class="govuk-hint">This is the domain name of your benefit. </p>
+            <input class="govuk-input govuk-!-width-two-thirds" id="task-domain" name="task-domain" type="text" value="{{ data['task-domain'] | default('Winter fuel') }}" ></div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="task-priority">
+                Enter priority
+              </label>
+              <p class="govuk-hint">Prority for this task </p>
+              <input class="govuk-input govuk-!-width-one-third" id="task-priority" name="task-priority" type="text" value="{{ data['task-priority'] | default('High') }}"></div>
+            <div class="govuk-form-group">
+              <label class="govuk-label" for="task-subject">
+                Enter subject (optional)
+              </label>
+              <p class="govuk-hint"> </p>
+              <input class="govuk-input" id="task-subjecte" name="task-subject" type="text" value="{{ data['task-subject'] | default('Winter fuel') }}" ></div>
+
+              <div class="govuk-form-group">
+                <br><br>
+                <p class="govuk-heading-m">Matching agent attributes</p>
+                <p class="govuk-hint">Select all that apply </p><br>
+
+                <!-- Attributes start -->
+                <div class="govuk-grid-row">
+
+
+                  <div class="govuk-grid-column-one-half">
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+                    <div class="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="selected-attributes-task" type="checkbox" value="Decision maker"  {{ checked("selected-attributes-task", "Decision maker") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                          Decision maker
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes-task" type="checkbox" value="Specialist "  {{ checked("selected-attributes-task", "Specialist") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                          Specialist
+                        </label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes-task" type="checkbox" value="Team leader"  {{ checked("selected-attributes-task", "Team leader") }}>
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                          Team leader
+                        </label>
+                      </div>
+
+                    </div>
+
+                  </fieldset>
+                </div>
+              </div>
+              <div class="govuk-grid-column-one-half">
+              <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="selected-attributes-task" type="checkbox" value="Team manager"  {{ checked("selected-attributes-task", "Team manager") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                      Team manager
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes-task" type="checkbox" value="Processing agent"  {{ checked("selected-attributes-task", "Processing agent") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      Processing agent
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes-task" type="checkbox" value="Visiting officer"  {{ checked("selected-attributes-task", "Visiting officer") }}>
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                      Visiting officer
+                    </label>
+                  </div>
+
+                </div>
+
+              </fieldset>
+              </div>
+              </div>
+              </div>
+              <!-- Attributes End -->
+              <br><br><br>
+              <p class="govuk-heading-m">Other details</p>
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="task-subject">
+                  Notes (optional)
+                </label>
+
+  <textarea class="govuk-textarea" id="more-detail" name="task-notes" rows="5" value="{{ data['task-notes']}}">{{ data['task-notes']}}</textarea>
+</div>
+
+      </fieldset>
+
+      <br><br>
+      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

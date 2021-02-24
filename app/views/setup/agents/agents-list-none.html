@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Agent attributes list
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="/index-attributes-agentinfo-task-done">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">Agents</a>
+  </li>
+
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Agents
+      </h1>
+
+
+      <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" >Name</th>
+      <th scope="col" class="govuk-table__header">ID</th>
+      <th scope="col" class="govuk-table__header">Agent attributes</th>
+      <th scope="col" class="govuk-table__header">Actions</th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Arthur Gernow</td>
+      <td class="govuk-table__cell">DWP1837</td>
+      <td class="govuk-table__cell">Processing agent </td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Paul James</td>
+      <td class="govuk-table__cell">DWP3312</td>
+      <td class="govuk-table__cell">Decision maker, Processing agent, New Castle location </td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Sam Smith</td>
+      <td class="govuk-table__cell">DWP3238</td>
+      <td class="govuk-table__cell">Specialist, Team leader</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">James Hammersmith</td>
+      <td class="govuk-table__cell">DWP9837</td>
+      <td class="govuk-table__cell">Processing agent, Leeds location </td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">John Lee</td>
+      <td class="govuk-table__cell">DWP3512</td>
+      <td class="govuk-table__cell">Decision maker, Processing agent </td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Lucius Tiberius</td>
+      <td class="govuk-table__cell">DWP9937</td>
+      <td class="govuk-table__cell">Specialist, Processing agent</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+
+
+  </tbody>
+</table>
+
+<p><a href="add-agent">Create agent</a></p>
+<br><br>
+<a href="/index-attributes-done"><button class="govuk-button" data-module="govuk-button">Save and continue</button></a>
+
+    </div>
+  </div>
+
+{% endblock %}

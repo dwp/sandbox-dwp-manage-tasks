@@ -1,0 +1,188 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  My tasks
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div>
+      <a href="/index-attributes-agentinfo-task-done" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+      <br><br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="agent-landing">
+                My tasks
+              </a>
+            </li>
+
+            <li class="govuk-header__navigation-item ">
+              <a class="govuk-header__link" href="my-clearances">
+                My clearances
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+      Task updated
+    </p>
+    <p class="govuk-body"><strong>Reason:</strong>&nbsp; {{ data['reason-for-not-doing-task-3'] }}</p>
+
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-two-thirds" style="width:75%;">
+    <h1 class="govuk-heading-xl">
+      My tasks
+    </h1>
+  </div>
+
+</div>
+
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-full">
+
+  <h2 class="govuk-heading-l" id="subsection-title">
+    Get a task
+  </h2>
+  <!-- Table to hold list of tasks -->
+  <p>Get a new task and view task details</p><br>
+        <a href="task-landing" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+          Get a task
+          <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+            <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+          </svg>
+        </a>
+        <br><br>
+
+
+                <br><br>
+                <h2 class="govuk-heading-l">In progress (5)</h2>
+                <!-- Table to hold list of tasks -->
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:37% !important;">Task</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:10% !important;">Parked on</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:20% !important;">Claimant name</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:30% !important;">Reason for parking</th>
+
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a href="#">Verify address</a></td>
+                      <td class="govuk-table__cell">02/01/2021</td>
+                      <td class="govuk-table__cell">Mark M</td>
+                      <td class="govuk-table__cell">Unknown system issue. </td>
+
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a href="#">Verify address</a></td>
+                      <td class="govuk-table__cell">05/01/2021</td>
+                      <td class="govuk-table__cell">James May</td>
+                      <td class="govuk-table__cell">System error while adding details</td>
+
+
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a href="#">Add payment details </a></td>
+                      <td class="govuk-table__cell">12/02/2021</td>
+                      <td class="govuk-table__cell">James May</td>
+                      <td class="govuk-table__cell">Claimant did not answer phone</td>
+
+
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a href="#">Add payment details</a></td>
+                      <td class="govuk-table__cell">14/02/2021</td>
+                      <td class="govuk-table__cell">Andy K</td>
+                      <td class="govuk-table__cell">Claimant did not answer phone</td>
+
+
+                    </tr>
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell"><a href="#">Verify address</a></td>
+                      <td class="govuk-table__cell">16/02/2021</td>
+                      <td class="govuk-table__cell">Andrew Smith</td>
+                      <td class="govuk-table__cell">I was called away to talk to another team member</td>
+
+
+                    </tr>
+
+
+                  </tbody>
+                </table>
+                <!-- Table to hold list of tasks -- END -->
+
+
+
+        <br><br>
+
+        <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Alternate page view
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            <p class="govuk-heading-m">Use case </p> When there are tasks in 'In progress' and 'Assigned' &nbsp; <a href="agent-landing-no-inprogress">Tasks 'In progress' and 'Assigned to me'</a>
+          </div>
+          <div class="govuk-details__text">
+            <p class="govuk-heading-m">Use case </p> No concept of park or assign <a href="agent-landing-t1">No 'In progress' and 'Assigned to me'</a>
+          </div>
+        </details>
+
+
+</div>
+
+
+</div>       <!-- End of main row -->
+
+
+
+{% endblock %}

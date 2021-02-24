@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add payment details
+{% endblock %}
+
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div>
+      <a href="/index-attributes-agentinfo-task-done" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+      <br><br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="agent-landing">
+                My tasks
+              </a>
+            </li>
+
+            <li class="govuk-header__navigation-item ">
+              <a class="govuk-header__link" href="my-clearances">
+                My clearances
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+
+
+<a class="govuk-back-link" href="task-landing">Back</a>
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<!-- Main content start -->
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">{{ data['task-name'] | default('Task name goes here') }}</h1>
+
+
+
+      <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+   <p class="govuk-caption-l">Relevant description of task appears here</p>
+
+  <br><br><br>
+  <p>
+
+
+<strong>Task journey and completion</strong><br>
+</p><p>
+You may be directed to an existing sytem to finish the task journey and may be directed to 'end this task' page once the task is completed. </p>
+
+<br><br>
+
+      <a href="thank-you-task-completed"><button class="govuk-button" data-module="govuk-button">Confirm task completion</button></a>
+      <br><br>
+          <p class="govuk-heading-s">Other actions</p>
+          <p>
+            <a href="park-task">Park task</a>
+          </p>
+
+    </div>
+  </div>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

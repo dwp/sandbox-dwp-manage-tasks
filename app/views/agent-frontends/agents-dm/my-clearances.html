@@ -1,0 +1,365 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  My clearnces
+{% endblock %}
+
+
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div>
+      <a href="/index-attributes-agentinfo-task-done" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+      <br><br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="agent-landing">
+                My tasks
+              </a>
+            </li>
+
+            <li class="govuk-header__navigation-item  govuk-header__navigation-item--active ">
+              <a class="govuk-header__link" href="my-clearances">
+                My clearances
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-grid-row">
+
+<div class="govuk-grid-column-full">
+  <h1 class="govuk-heading-xl">
+    My clearances
+  </h1>
+  </div>
+
+</div>
+<div class="govuk-grid-row">
+
+  <div class="govuk-grid-column-full">
+
+  <h1 class="govuk-heading-m">Summary
+      <span class="govuk-hint">Since 1 December 2020 </span>
+  </h1>
+  </div>
+
+    <div class="govuk-grid-column-one-third">
+      <label class="govuk-label" for="overall-statistics">Tasks completed</label>
+      <h1 class="govuk-heading-xl">
+        149
+      </h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <label class="govuk-label" for="overall-statistics">Tasks assigned to someone else</label>
+      <h1 class="govuk-heading-xl">
+        12
+      </h1>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+      <label class="govuk-label" for="overall-statistics">Average time (minutes)</label>
+      <h1 class="govuk-heading-xl">
+        15:23
+      </h1>
+    </div>
+    <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--m">
+    </div>
+
+    <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--hidden govuk-section-break--m">
+
+    <h1 class="govuk-heading-m">Tasks summary
+        <span class="govuk-hint">Last updated 12 December 2020.</span>
+    </h1>
+    <br>
+    </div>
+
+    <div class="govuk-grid-column-full">
+
+
+      <div class="govuk-tabs" data-module="govuk-tabs">
+        <h2 class="govuk-tabs__title">
+          Contents
+        </h2>
+        <ul class="govuk-tabs__list">
+          <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+            <a class="govuk-tabs__tab" href="#past-day">
+              Past day
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-week">
+              Past week
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-month">
+              Past month
+            </a>
+          </li>
+          <li class="govuk-tabs__list-item">
+            <a class="govuk-tabs__tab" href="#past-year">
+              Past year
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-tabs__panel" id="past-day">
+          <h2 class="govuk-heading-l">Past day</h2>
+
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                New tasks added
+              </dt>
+              <dd class="govuk-summary-list__value">
+                0
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Started
+              </dt>
+              <dd class="govuk-summary-list__value">
+                6
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Completed
+              </dt>
+              <dd class="govuk-summary-list__value">
+                3
+              </dd>
+            </div>
+
+          </dl>
+
+
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+          <h2 class="govuk-heading-l">Past week</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                New tasks added
+              </dt>
+              <dd class="govuk-summary-list__value">
+                50
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Started
+              </dt>
+              <dd class="govuk-summary-list__value">
+                43
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Completed
+              </dt>
+              <dd class="govuk-summary-list__value">
+                43
+              </dd>
+            </div>
+
+          </dl>
+
+        </div>
+
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-month">
+          <h2 class="govuk-heading-l">Past month</h2>
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                New tasks added
+              </dt>
+              <dd class="govuk-summary-list__value">
+                60
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Started
+              </dt>
+              <dd class="govuk-summary-list__value">
+                73
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Completed
+              </dt>
+              <dd class="govuk-summary-list__value">
+                63
+              </dd>
+            </div>
+
+          </dl>
+
+        </div>
+        <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-year">
+          <h2 class="govuk-heading-l">Past year</h2>
+
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                New tasks added
+              </dt>
+              <dd class="govuk-summary-list__value">
+                131
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Started
+              </dt>
+              <dd class="govuk-summary-list__value">
+                129
+              </dd>
+            </div>
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Completed
+              </dt>
+              <dd class="govuk-summary-list__value">
+                129
+              </dd>
+            </div>
+
+          </dl>
+
+        </div>
+      </div>
+      <br>
+
+
+      <!-- <p>This paragraph has a link to <a href="/url/of/onward/page">find out more about this subject</a>.</p> -->
+
+      <div class="govuk-inset-text">
+        <span class="govuk-hint">Last weekly report automatically sent to team leader at 12:22, 12 December 2020. <a href="">Report an issue</a></span>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div class="govuk-grid-row">
+
+
+
+    <div class="govuk-grid-column-full">
+      <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--m">
+
+      <br>
+      <br>
+
+
+      <h1 class="govuk-heading-m">Recently completed tasks
+          <span class="govuk-hint">Your 10 most recently completed tasks and how long it took to do them </span>
+      </h1>
+        <br>
+
+
+  <table class="govuk-table">
+
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header govuk-!-width-two-thirds" >Task</th>
+        <!-- <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:27% !important;">Other information</th> -->
+        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" >Time taken (minutes)</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a >Check breaks in care </a></td>
+        <td class="govuk-table__cell">11:39</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <!-- <th scope="row" class="govuk-table__header">Total estimated pay</th> -->
+        <td class="govuk-table__cell"><a>Add payment details</a></td>
+        <td class="govuk-table__cell">05:09</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Check disabled person's details and appointee  </a></td>
+        <td class="govuk-table__cell">59:19</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Check applicant and partner benefits </a></td>
+        <td class="govuk-table__cell">31:12</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Verify addresses</a></td>
+        <td class="govuk-table__cell">02:08</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Update employment status </a></td>
+        <td class="govuk-table__cell">21:32</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Update education details </a></td>
+        <td class="govuk-table__cell">06:02</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Check claim details</a></td>
+        <td class="govuk-table__cell">12:29</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Add payment details</a></td>
+        <td class="govuk-table__cell">02:20</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell"><a>Update ceased to care details</a></td>
+        <td class="govuk-table__cell">11:29</td>
+      </tr>
+
+    </tbody>
+  </table>
+  </div>
+
+{% endblock %}

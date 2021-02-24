@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  DWP Manage task
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="#" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <!-- Notice for conceptual prototype -->
+    <div class="govuk-error-summary" style="border-color:#999999 !important;"aria-labelledby="error-summary-title"  data-module="govuk-error-summary">
+      <h2 class="govuk-error-summary__title" id="error-summary-title" style="margin-bottom:0px;">
+        Experimental/conceptual prototype for PoC demo only
+      </h2>
+    </div>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4"><span class="govuk-caption-l">Sandpit version</span>DWP Manage tasks </h1>
+    <br>
+  </div>
+</div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <p>Use this sandpit version of the service to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>understand how the service works</li>
+        <li>understand elements needed for integration</li>
+        <li>add example agent, task details</li>
+        <li>understand and view few backend processes (as interfaces)</li>
+        <li>view example interfaces for the agents</li>
+      </ul>
+
+      <p></p>
+      <br><br>
+
+      <h2 class="govuk-heading-m">About the Sandpit Version</h2>
+
+
+      <p>Created to sense check PoC, insights, assumptions and to gain deeper understanding of user and business needs (for future capabilities) </p>
+
+      <p>To demo backend functionality and agent facing transactions.</p>
+
+      <p>You can contact the team to get more accruate information about the processes and requirements for the service.</p>
+      <br>
+      <br>
+      <a href="index-attributes-agentInfo-task-done" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        View sandpit version 
+        <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+          <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
+        </svg>
+      </a>
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related links
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Related link in confluence
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link to technical implementation (confluence)
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Related link to team contact page (confluence)
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+
+
+  </div>
+{% endblock %}

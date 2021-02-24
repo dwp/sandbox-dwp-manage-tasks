@@ -1,0 +1,160 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Change agent information
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+  <a class="govuk-back-link" href="agents-list">Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form class="form" action="agents-list" method="post">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Change agent information
+      </h1>
+
+      <p>Change agent information and their attributes.</p><br>
+
+        <fieldset class="govuk-fieldset">
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="agent-name">
+      Full name
+    </label>
+    <input class="govuk-input" id="agent-name" name="agent-name" type="text" value="{{ data['agent-name'] }}"></div>
+
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="agent-keyid">
+      ID
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="agent-keyid" name="agent-keyid" type="text" value="{{ data['agent-keyid'] }}"></div>
+
+</fieldset>
+
+
+
+
+    </div>
+  </div>
+<br>
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-heading-m">
+      Agent attributes
+    </h1>
+  </legend>
+  <div id="waste-hint" class="govuk-hint">
+    Select all that apply.
+  </div>
+  <div class="govuk-grid-row">
+
+
+    <div class="govuk-grid-column-one-half">
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+
+      <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input selected" id="waste" name="selected-attributes" type="checkbox" value="Decision maker" {{ checked("selected-attributes", "Decision maker") }} >
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Decision maker
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes" type="checkbox" value="Specialist" {{ checked("selected-attributes", "Specialist") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+            Specialist
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="Team leader" {{ checked("selected-attributes", "Team leader") }}>
+          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+            Team leader
+          </label>
+        </div>
+
+      </div>
+
+    </fieldset>
+  </div>
+</div>
+
+<div class="govuk-grid-column-one-half">
+<div class="govuk-form-group">
+<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+  <div class="govuk-checkboxes">
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste" name="selected-attributes" type="checkbox" value="Team manager" {{ checked("selected-attributes", "Team manager") }}>
+      <label class="govuk-label govuk-checkboxes__label" for="waste">
+        Team manager
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes" type="checkbox" value="Processing agent" {{ checked("selected-attributes", "Processing agent") }}>
+      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+        Processing agent
+      </label>
+    </div>
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="Visiting officer" {{ checked("selected-attributes", "Visiting officer") }}>
+      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+        Visiting officer
+      </label>
+    </div>
+
+  </div>
+
+</fieldset>
+</div>
+</div>
+</div>
+
+
+<br>
+<button class="govuk-button" data-module="govuk-button">Save and continue</button>
+</form>
+
+</div>
+</div>
+
+
+
+{% endblock %}

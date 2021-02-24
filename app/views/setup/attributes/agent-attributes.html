@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Agent attributes list
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="/index-attributes-agentInfo-task-done">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">Agent attributes</a>
+  </li>
+
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Agent attributes
+      </h1>
+
+
+      <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header" style="width:50%;">Attribute name</th>
+      <th scope="col" class="govuk-table__header">Unique ID</th>
+      <th scope="col" class="govuk-table__header">Actions</th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Decision maker</td>
+      <td class="govuk-table__cell">DWP000012</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Leads location</td>
+      <td class="govuk-table__cell">DWP000013</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Processing agent</td>
+      <td class="govuk-table__cell">DWP000015</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Specialist</td>
+      <td class="govuk-table__cell">DWP000001</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">New Castle location</td>
+      <td class="govuk-table__cell">DWP000002</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">Team leader</td>
+      <td class="govuk-table__cell">DWP000023</td>
+      <td class="govuk-table__cell"><a href="">Change</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">{{ data['attribute-name'] | default('Team manager') }}</td>
+      <td class="govuk-table__cell">{{ data['attribute-uid'] | default('DWP000048') }}</td>
+      <td class="govuk-table__cell"><a href="change-attribute">Change</a></td>
+      <td class="govuk-table__cell"><a href="remove-attribute">Remove</a></td>
+    </tr>
+
+
+
+
+
+
+  </tbody>
+</table>
+
+<p><a href="add-attributes-additional">Create attribute </a></p>
+<br><br>
+<a href="/index-attributes-done"><button class="govuk-button" data-module="govuk-button">Save and continue</button></a>
+
+    </div>
+  </div>
+
+{% endblock %}

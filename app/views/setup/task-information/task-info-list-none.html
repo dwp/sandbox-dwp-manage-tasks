@@ -1,0 +1,131 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Task information
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    function getDate () { var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    document.write(today);
+   }
+  </script>
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="/index-attributes-agentinfo-task-done">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">Tasks</a>
+  </li>
+
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        Tasks
+      </h1>
+
+      <br>
+
+      <table class="govuk-table">
+    <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">ID</th>
+      <th scope="col" class="govuk-table__header" style="width: 37% !important;">Task name</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+      <th scope="col" class="govuk-table__header">Created on</th>
+      <th scope="col" class="govuk-table__header">Actions</th>
+      <th scope="col" class="govuk-table__header"></th>
+
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">DWP2929</td>
+      <td class="govuk-table__cell">Add payment details</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Inactive</strong></td>
+      <td class="govuk-table__cell">01/02/2021</td>
+      <td class="govuk-table__cell"><a href="">View details</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">DWP2829</td>
+      <td class="govuk-table__cell">Verify address</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
+      <td class="govuk-table__cell">02/02/2021</td>
+      <td class="govuk-table__cell"><a href="">View details</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">DWP8929</td>
+      <td class="govuk-table__cell">Verify address</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Inactive</strong></td>
+      <td class="govuk-table__cell">02/02/2021</td>
+      <td class="govuk-table__cell"><a href="">View details</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell">DWP2829</td>
+      <td class="govuk-table__cell">Verify address</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
+      <td class="govuk-table__cell">31/01/2021</td>
+      <td class="govuk-table__cell"><a href="">View details</a></td>
+      <td class="govuk-table__cell"><a href="">Remove</a></td>
+    </tr>
+
+
+
+  </tbody>
+</table>
+
+<p><a href="add-task">Create task </a></p>
+<br><br>
+<a href="/index-attributes-agentinfo-done"><button class="govuk-button" data-module="govuk-button">Save and continue</button></a>
+
+    </div>
+  </div>
+
+{% endblock %}

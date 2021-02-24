@@ -1,0 +1,84 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add agent attribute
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Demo
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandpit version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+  <a class="govuk-back-link" href="agent-attributes-none">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Create agent attribute
+
+      </h1>
+      <div class="govuk-inset-text">
+        Attribute can be a role or type of agent used for task matching.
+      </div>
+
+      <form class="form" action="agent-attributes" method="post">
+        <fieldset class="govuk-fieldset">
+
+          <br>
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="attribute-name">
+            Enter attribute name
+          </label>
+          <p class="govuk-hint">This could be the role or any other unique matching attribute. For example 'Decision maker' or 'Payment specialist' </p>
+          <input class="govuk-input" id="attribute-name" name="attribute-name" type="text" ></div>
+
+
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="attribute-uid">
+            Enter unique ID
+          </label>
+          <p class="govuk-hint">This is the unique identifier for the attribute you are creating. </p>
+          <input class="govuk-input govuk-!-width-two-thirds" id="attribute-uid" name="attribute-uid" type="text"></div>
+
+
+
+      </fieldset>
+
+      <br><br>
+      <button class="govuk-button" data-module="govuk-button">Create attribute</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

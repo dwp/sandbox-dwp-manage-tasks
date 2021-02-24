@@ -1,0 +1,261 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  I can't do this task
+{% endblock %}
+
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    function validateForm() {
+      var x = document.forms["reason-form-2"]["reason-for-not-doing-task-2"].value;
+      var y = document.getElementById("error-summary-2");
+      var yy = document.getElementById("error-summary-2-2");
+      var reason_error = document.getElementById("no-reason-error-2");
+      var other_reason = document.getElementById("other-reason-required-2").value;
+      var reason_error_2 = document.getElementById("no-reason-error-2-2");
+      if (x == "") {
+        y.style.display="block";
+        reason_error.style.display="block";
+        $("#reason-options-2").addClass("govuk-form-group--error");
+        return false;
+      } else if ( x == " " && other_reason == "") {
+        y.style.display="none";
+        reason_error.style.display="none";
+        yy.style.display="block";
+        reason_error_2.style.display="block";
+        $("#reason-options-2").addClass("govuk-form-group--error");
+        $("#other-reason-required-2").addClass("govuk-textarea--error");
+        return false;
+      }
+    }
+
+  </script>
+
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div>
+      <a href="/index-attributes-agentinfo-task-done" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage tasks
+          </span>
+        </span>
+      </a>
+      <br><br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="agent-landing">
+                My tasks
+              </a>
+            </li>
+
+            <li class="govuk-header__navigation-item ">
+              <a class="govuk-header__link" href="my-clearances">
+                My clearances
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="bluezone-process">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+<div class="govuk-error-summary govuk-radios__conditional--hidden" id="error-summary-2" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" >
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#no-reason-error">Select your reason for not doing this task</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Error Summary 2 -->
+<div class="govuk-error-summary govuk-radios__conditional--hidden" id="error-summary-2-2" aria-labelledby="error-summary-title" role="alert" tabindex="-1" data-module="govuk-error-summary" >
+  <h2 class="govuk-error-summary__title" id="error-summary-title">
+    There is a problem
+  </h2>
+  <div class="govuk-error-summary__body">
+    <ul class="govuk-list govuk-error-summary__list">
+      <li>
+        <a href="#other-reason-required">Enter your reason for not doing this task</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<!--
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Task information
+    </span>
+  </summary>
+
+
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Task ID
+      </dt>
+      <dd class="govuk-summary-list__value">
+          DWP2929
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Date created
+      </dt>
+      <dd class="govuk-summary-list__value">
+          28/01/2021
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Status
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Active
+        </strong>
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Subject
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Claimant name and bank details don't match.
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Priority
+      </dt>
+      <dd class="govuk-summary-list__value">
+        High
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Notes
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Check with claimant and add new payment details to claimant account.
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Assigned by
+      </dt>
+      <dd class="govuk-summary-list__value">
+        System
+      </dd>
+
+    </div>
+
+
+  </dl>
+
+
+</details>
+ -->
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Why do you want to park this task?</h1>
+
+      <form class="form " name="reason-form-2" action="agent-landing-success-park" method="post">
+
+      <div class="govuk-form-group" id="reason-options-3">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <div id="contact-hint" class="govuk-hint">
+            Select one option.
+          </div>
+
+
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reason-1" name="pause-this-task" type="radio" value="Incorrect bank details" data-aria-controls="pause-this-task">
+              <label class="govuk-label govuk-radios__label" for="reason-1">
+                Incorrect details
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reason-2" name="pause-this-task" type="radio" value="Claimant did not answer phone" data-aria-controls="pause-this-task">
+              <label class="govuk-label govuk-radios__label" for="reason-1">
+                Claimant did not answer phone
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="reason-4" name="pause-this-task" type="radio" data-aria-controls="pause-this-task">
+              <label class="govuk-label govuk-radios__label" for="reason-4">
+                Other reason
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="pause-this-task">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="reason-5">
+                  Enter reason for parking task
+                </label>
+
+                <!-- Field Error - Start -->
+                <span id="no-reason-error-2-2" class="govuk-error-message govuk-radios__conditional--hidden">
+                    <span class="govuk-visually-hidden">Error:</span>Enter reason for parking task
+                </span>
+                <!-- Field Error - End -->
+
+
+                <textarea class="govuk-textarea" id="other-reason-required-2" name="pause-this-task" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+            </div>
+          </div>
+
+        </fieldset>
+      </div>
+
+
+      <button class="govuk-button" data-module="govuk-button">Park task</button>
+
+      </form>
+
+
+
+
+    </div>
+  </div>
+
+{% endblock %}
