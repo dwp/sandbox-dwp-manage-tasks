@@ -2,7 +2,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  DWP Manage tasks
+  DWP Manage task
 {% endblock %}
 
 
@@ -13,7 +13,7 @@
       <a href="/" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype">
           <span class="govuk-header__logotype-text">
-            DWP Manage tasks
+            DWP Manage task
           </span>
         </span>
       </a>
@@ -43,7 +43,7 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4"><span class="govuk-caption-l">Sandpit version</span>DWP Manage tasks </h1>
+    <h1 class="govuk-heading-xl govuk-!-margin-bottom-4"><span class="govuk-caption-l">Sandpit version</span>DWP Manage task </h1>
     <br>
   </div>
 </div>
@@ -60,9 +60,14 @@
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
-             Intial setup 
-             <p class="govuk-hint">Setup to create attributes, agents and tasks for task matching </p>
+             Intial setup
           </h2>
+          <p>You can create:</p>
+            <ul class="app-task-list__items">
+           <li>agent attributes</li>
+            <li> agents</li>
+             <li>tasks for matching tasks to agents</li>
+           </ul>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -94,8 +99,10 @@
         <li>
           <h2 class="app-task-list__section">
            Task matching
-           <p class="govuk-hint">A view of tasks matched with agents who can perform the task based on the attribute(s) provided </p>
           </h2>
+
+           <p class="govuk-hint">A view of tasks matched with agents who can perform the task based on attributes provided </p>
+           <br>
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -110,28 +117,37 @@
 
         <li>
           <h2 class="app-task-list__section">
-            Example agent interface
-            <p class="govuk-hint">Frontend for agent to view, complete and manage their tasks </p>
+          Agent interface example
           </h2>
-
+          <p class="govuk-hint">Frontend for agent to view, complete and manage their tasks </p>
+          <br>
           <ul class="app-task-list__items">
 
             <li class="app-task-list__item">
-              <a href="/agent-frontends/agents-dm/select-agent" aria-describedby="company-information-status">
               <span class="app-task-list__task-name">
-                For agents and decision makers
-              </span>
+              <a href="/agent-frontends/agents-dm/select-agent" aria-describedby="company-information-status">
+
+                For case managers and decision makers
+
               </a>
+              </span>
             </li>
+            </ul>
+
+            <h2 class="app-task-list__section">
+            Manager interface example
+            </h2>
+              <p class="govuk-hint">Frontend for managers to view, complete and manage their tasks </p>
+              <br>
+            <ul class="app-task-list__items">
+
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                  For managers and team leaders (TBC)
-
+            For managers and team leaders (TBC)
               </span>
             </li>
-
           </ul>
-        </li>
+
       </ol>
     </div>
   </div>
