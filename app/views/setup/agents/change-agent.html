@@ -11,7 +11,7 @@
       <a href="/" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype">
           <span class="govuk-header__logotype-text">
-            DWP Manage tasks
+            DWP Manage task
           </span>
         </span>
       </a>
@@ -55,7 +55,7 @@
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="agent-name">
-      Full name
+      Full name of agent
     </label>
     <input class="govuk-input" id="agent-name" name="agent-name" type="text" value="{{ data['agent-name'] }}"></div>
 
@@ -63,7 +63,7 @@
 
   <div class="govuk-form-group">
     <label class="govuk-label" for="agent-keyid">
-      ID
+      Identifier
     </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="agent-keyid" name="agent-keyid" type="text" value="{{ data['agent-keyid'] }}"></div>
 
@@ -105,9 +105,9 @@
           </label>
         </div>
         <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="Team leader" {{ checked("selected-attributes", "Team leader") }}>
+          <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="Team leader" {{ checked("selected-attributes", "Leeds location") }}>
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Team leader
+            Leeds
           </label>
         </div>
 
@@ -134,9 +134,9 @@
       </label>
     </div>
     <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="Visiting officer" {{ checked("selected-attributes", "Visiting officer") }}>
+      <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="Visiting officer" {{ checked("selected-attributes", "New Castle location") }}>
       <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-        Visiting officer
+        Newcastle
       </label>
     </div>
 
