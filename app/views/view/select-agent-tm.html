@@ -1,0 +1,106 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  View task queue or task matching
+{% endblock %}
+
+{% block pageScripts %}
+  <script type="text/javascript">
+    function getDate () { var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    today = mm + '/' + dd + '/' + yyyy;
+    document.write(today);
+   }
+  </script>
+{% endblock %}
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div class="govuk-header__logo">
+      <a href="/" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage task
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Sandbox Version
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a demo sandbox version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+<br>
+<div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
+<ol class="govuk-breadcrumbs__list">
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="/index-attributes-agentinfo-task-done">Home</a>
+  </li>
+  <li class="govuk-breadcrumbs__list-item">
+    <a class="govuk-breadcrumbs__link" href="#">Tasks matched to agents</a>
+  </li>
+
+</ol>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-xl">
+        <!-- <span class="govuk-caption-l">Sandbox</span> -->
+        Select agent
+      </h1>
+      <!-- <div class="govuk-inset-text">
+      <p>Tasks matched to agents with the relevant attributes.</p>
+      </div> -->
+      <br>
+
+
+
+<br>
+
+<h2 class="govuk-heading-m">
+  Select agent to view matched agent tasks
+</h2>
+
+
+<form class="" action="selected-task-matched" method="post">
+  <div class="govuk-form-group">
+    <select class="govuk-select govuk-!-width-one-third" id="agent-name-selected" name="agent-name-selected">
+      <option selected>-Select agent - </option>
+      <option value="Arthur Gernow">Arthur Gernow</option>
+      <option value="Paul James" >Paul James</option>
+      <option value="Sam Smith">Sam Smith</option>
+      <option value="James Hammersmith">James Hammersmith</option>
+      <option value="John Lee">John Lee</option>
+      <option value="Lucius Tiberius">Lucius Tiberius</option>
+
+    </select>
+  </div>
+
+  <br>
+  <br>
+  <button class="govuk-button" data-module="govuk-button">Get matched tasks</button>
+</form>
+
+    </div>
+  </div>
+
+{% endblock %}

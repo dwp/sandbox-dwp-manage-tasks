@@ -25,7 +25,7 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Demo
+      Sandbox Version
     </strong>
     <span class="govuk-phase-banner__text">
       This is a demo sandbox version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -33,6 +33,21 @@
   </p>
 </div>
 <br>
+
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content" >
+    <p class="govuk-body" style="max-width:none !important;">
+       Forms and elements are for demo purposes only. Get in touch to discuss your requirements and business needs.
+    </p>
+  </div>
+</div>
+<br>
+
   <a class="govuk-back-link" href="agent-attributes-removed">Back</a>
 {% endblock %}
 
@@ -42,8 +57,8 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Sandbox</span>
-        Create agent attribute
+        <!-- <span class="govuk-caption-l">Sandbox</span> -->
+        Create task matching attribute
       </h1>
 
       <div class="govuk-inset-text">
@@ -52,7 +67,15 @@
 
       <form class="form" action="agent-attributes" method="post">
         <fieldset class="govuk-fieldset">
-        <div class="govuk-form-group">
+          <br>
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="attribute-group">
+              Enter group name
+            </label>
+            <p class="govuk-hint">This is the group or type where this attribute belongs to. For example 'role' or 'location'</p>
+
+            <input class="govuk-input govuk-!-width-two-thirds" id="attribute-group" name="attribute-group" type="text"></div>
+          <div class="govuk-form-group">
           <label class="govuk-label" for="attribute-name">
             Enter attribute name
           </label>
@@ -61,14 +84,12 @@
 
 
 
-        <div class="govuk-form-group">
+          <div class="govuk-form-group">
           <label class="govuk-label" for="attribute-uid">
-            Enter unique identifier
+            Enter attribute identifier
           </label>
           <p class="govuk-hint">This is the unique identifier for the attribute you are creating. </p>
-
           <input class="govuk-input govuk-!-width-two-thirds" id="attribute-uid" name="attribute-uid" type="text"></div>
-
 
 
       </fieldset>

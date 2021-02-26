@@ -25,7 +25,7 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Demo
+      Sandbox Version
     </strong>
     <span class="govuk-phase-banner__text">
       This is a demo sandbox version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -42,11 +42,10 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Sandbox</span>
         Create task
       </h1>
 
-      <form class="form" action="task-info-list" method="post">
+      <form class="form" action="task-info-list" novalidate>
         <fieldset class="govuk-fieldset">
 
           <br>
@@ -85,82 +84,8 @@
               <p class="govuk-hint"> </p>
               <input class="govuk-input" id="task-subjecte" name="task-subject" type="text" ></div>
 
+              <div>
 
-              <div class="govuk-form-group">
-                <br><br>
-                <p class="govuk-heading-m">Matching agent attributes</p>
-                <p class="govuk-hint">Select all that apply </p><br>
-
-                <!-- Attributes start -->
-                <div class="govuk-grid-row">
-
-
-                  <div class="govuk-grid-column-one-half">
-
-                <div class="govuk-form-group">
-                  <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-
-                    <div class="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste" name="selected-attributes-task" type="checkbox" value="Decision maker">
-                        <label class="govuk-label govuk-checkboxes__label" for="waste">
-                          Decision maker
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes-task" type="checkbox" value="Specialist ">
-                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                          Specialist
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes-task" type="checkbox" value="Team leader">
-                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                          Leeds
-                        </label>
-                      </div>
-
-                    </div>
-
-                  </fieldset>
-                </div>
-              </div>
-              <div class="govuk-grid-column-one-half">
-              <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="selected-attributes-task" type="checkbox" value="Team manager" >
-                    <label class="govuk-label govuk-checkboxes__label" for="waste">
-                      Team manager
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes-task" type="checkbox" value="Processing agent">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                      Processing agent
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes-task" type="checkbox" value="Visiting officer">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-                      Newcastle
-                    </label>
-                  </div>
-
-                </div>
-
-              </fieldset>
-              </div>
-              </div>
-              </div>
-              <br>
-              <p><strong>Can't see the agent attribute you want? </strong> &nbsp;<a href="/setup/attributes/add-attributes">Create agent attribute</a> </p>
-              <p></p>
-            
-              <!-- Attributes End -->
-              <br><br><br>
-              <p class="govuk-heading-m">Other details</p>
               <div class="govuk-form-group">
                 <label class="govuk-label" for="task-subject">
                   Notes (optional)
@@ -169,14 +94,69 @@
   <textarea class="govuk-textarea" id="more-detail" name="task-notes" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
 
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<div class="moj-add-another">
+  <div class="govuk-form-group ">
+<fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+
+<p class="govuk-heading-m">Matching attributes<span class="govuk-hint">Add all primary and other task matching attributes </span></p>
+<br>
+<label class="govuk-label" for="sort">
+Select an attribute
+</label>
+<select class="govuk-select govuk-!-width-two-thirds" id="sort" name="sort">
+<option value="published">-Select- </option>
+<option value="published">Decision maker </option>
+<option value="updated" >Processing agent</option>
+<option value="comments">Specialist</option>
+<option value="views">Team manager</option>
+<option value="views">Leeds</option>
+<option value="views">Newcastle</option>
+<option value="views">New claims</option>
+</select>
+<br>
+<br>
+<br>
+<p>Is this a primary task matching attribute?</p>
+<div class="govuk-radios govuk-radios--inline">
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+<label class="govuk-label govuk-radios__label" for="changed-name">
+Yes
+</label>
+</div>
+<div class="govuk-radios__item">
+<input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+<label class="govuk-label govuk-radios__label" for="changed-name-2">
+No
+</label>
+</div>
+</div>
+
+</fieldset>
+</div>
+
+
+<button class="govuk-button govuk-button--secondary  govuk-!-margin-bottom-4" data-module="govuk-button">Add another attribute</button>
+</div>
+</div>
+<p><strong>Can't see the agent attribute you want? </strong> &nbsp;<a href="/setup/attributes/add-attributes">Create task matching attribute</a> </p>
+<p></p>
+
+
       </fieldset>
 
-      <br><br>
+
+
+      <br><br><br>
       <button class="govuk-button" data-module="govuk-button">Create task</button>
 
       </form>
 
-    </div>
-  </div>
+</div>
+</div>
+
+
 
 {% endblock %}

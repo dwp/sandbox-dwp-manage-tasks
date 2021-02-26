@@ -25,7 +25,7 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Demo
+      Sandbox Version
     </strong>
     <span class="govuk-phase-banner__text">
       This is a demo sandbox version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -43,18 +43,26 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Sandbox</span>
-        Change agent attribute
+
+        Change task matching attribute
       </h1>
       <form class="form" action="agent-attributes" method="post">
         <fieldset class="govuk-fieldset">
 
           <br>
+
+          <div class="govuk-form-group">
+            <label class="govuk-label" for="attribute-group">
+              Group
+            </label>
+            <input class="govuk-input govuk-!-width-two-thirds" id="attribute-group" name="attribute-group" type="text" value="{{ data['attribute-group'] | default('Role')}}"></div>
+
+
         <div class="govuk-form-group">
           <label class="govuk-label" for="attribute-name">
             Attribute name
           </label>
-          <input class="govuk-input" id="attribute-name" name="attribute-name" type="text" value="{{ data['attribute-name'] }}"></div>
+          <input class="govuk-input" id="attribute-name" name="attribute-name" type="text" value="{{ data['attribute-name'] | default('Decision maker') }}"></div>
 
 
 
@@ -62,7 +70,7 @@
           <label class="govuk-label" for="attribute-uid">
             Unique identifier
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="attribute-uid" name="attribute-uid" type="text" value="{{ data['attribute-uid'] }}"></div>
+          <input class="govuk-input govuk-!-width-two-thirds" id="attribute-uid" name="attribute-uid" type="text" value="{{ data['attribute-uid'] | default('XXX XXXXX') }}"></div>
 
 
 

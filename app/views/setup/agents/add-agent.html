@@ -25,7 +25,7 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Demo
+      Sandbox Version
     </strong>
     <span class="govuk-phase-banner__text">
       This is a demo sandbox version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -33,6 +33,19 @@
   </p>
 </div>
 <br>
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Important
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content" >
+    <p class="govuk-body" style="max-width:none !important;">
+       Forms and elements are for demo purposes only. Get in touch to discuss your requirements and business needs.
+    </p>
+  </div>
+</div>
+
   <a class="govuk-back-link" href="agents-list-none">Back</a>
 {% endblock %}
 
@@ -45,7 +58,6 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Sandbox</span>
         Create agent
       </h1>
 
@@ -73,91 +85,53 @@
 </fieldset>
 
 
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
 
 
     </div>
+
   </div>
-<br>
+
+
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
     <h1 class="govuk-heading-m">
       Agent attributes
     </h1>
   </legend>
-  <div id="waste-hint" class="govuk-hint">
-    Select all that apply.
-  </div>
-  <div class="govuk-grid-row">
+
+  <div class="moj-add-another">
+    <div class="govuk-form-group ">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+  <br>
+  <label class="govuk-label" for="sort">
+  Select an attribute
+  </label>
+  <select class="govuk-select govuk-!-width-one-third" id="sort" name="sort">
+  <option value="published">-Select- </option>
+  <option value="published">Decision maker </option>
+  <option value="updated" >Processing agent</option>
+  <option value="comments">Specialist</option>
+  <option value="views">Team manager</option>
+  <option value="views">Leeds</option>
+  <option value="views">Newcastle</option>
+  <option value="views">New claims</option>
+  </select>
+  <br>
 
 
-    <div class="govuk-grid-column-one-half">
-
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-
-      <div class="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="selected-attributes" type="checkbox" value="Decision maker">
-          <label class="govuk-label govuk-checkboxes__label" for="waste">
-            Decision maker
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes" type="checkbox" value="Specialist ">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-            Specialist
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="Leeds location">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Leeds
-          </label>
-        </div>
-
-      </div>
-
-    </fieldset>
-  </div>
-</div>
-
-<div class="govuk-grid-column-one-half">
-<div class="govuk-form-group">
-<fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-  <div class="govuk-checkboxes">
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="waste" name="selected-attributes" type="checkbox" value="Team manager">
-      <label class="govuk-label govuk-checkboxes__label" for="waste">
-        Team manager
-      </label>
-    </div>
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="waste-2" name="selected-attributes" type="checkbox" value="Processing agent">
-      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-        Processing agent
-      </label>
-    </div>
-    <div class="govuk-checkboxes__item">
-      <input class="govuk-checkboxes__input" id="waste-3" name="selected-attributes" type="checkbox" value="New Castle location">
-      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-        Newcastle
-      </label>
-    </div>
-
+  </fieldset>
   </div>
 
-</fieldset>
 
-</div>
-</div>
-</div>
-<br>
-<p><strong>Can't see the agent attribute you want? </strong> &nbsp;<a href="/setup/attributes/add-attributes">Create agent attribute</a> </p>
-<p></p>
+  <button class="govuk-button govuk-button--secondary  govuk-!-margin-bottom-4" data-module="govuk-button">Add another attribute</button>
+  </div>
+
+  <p><strong>Can't see the agent attribute you want? </strong> &nbsp;<a href="/setup/attributes/add-attributes">Create task matching attribute</a> </p>
 <br><br>
-<br>
-<button class="govuk-button" data-module="govuk-button">Create agent</button>
-</form>
 
+<button class="govuk-button" data-module="govuk-button">Create agent</button>
+<br>
+<br>
 </div>
 </div>
 

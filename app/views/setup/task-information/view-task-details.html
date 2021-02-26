@@ -25,7 +25,7 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Demo
+      Sandbox Version
     </strong>
     <span class="govuk-phase-banner__text">
       This is a demo sandbox version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -42,7 +42,6 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Sandbox</span>
         Task details
       </h1>
 
@@ -115,29 +114,7 @@
       </a>
     </dd>
   </div>
-</dl>
-<br><br>
-<p class="govuk-heading-m" >Matching attributes</p>
 
-<dl class="govuk-summary-list">
-  <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      Selected agent attributes
-    </dt>
-    <dd class="govuk-summary-list__value">
-      {{ data['selected-attributes-task'] | default('Winter fuel') }}
-    </dd>
-    <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="change-task-details">
-        Change<span class="govuk-visually-hidden"> attribute information</span>
-      </a>
-    </dd>
-  </div>
-</dl>
-<br><br>
-<p class="govuk-heading-m">Other details</p>
-
-<dl class="govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       Notes
@@ -151,8 +128,37 @@
       </a>
     </dd>
   </div>
-
 </dl>
+<br><br>
+<p class="govuk-heading-m" >Matching attributes</p>
+
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Attribute name</th>
+      <th scope="col" class="govuk-table__header">Type of attribute </th>
+      <th scope="col" class="govuk-table__header"></th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">{{ data['selected-attributes'] | default('Decision maker') }}</td>
+      <td class="govuk-table__cell">{{ data['attritute-type'] | default('Primary') }}</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task subject details</span>
+      </a></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <td class="govuk-table__cell ">{{ data['selected-attributes'] | default('Leeds') }}</td>
+      <td class="govuk-table__cell ">{{ data['attritute-type'] | default('Not primary') }}</td>
+      <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="change-task-details">
+        Change<span class="govuk-visually-hidden"> task subject details</span>
+      </a></td>
+    </tr>
+
+  </tbody>
+</table>
+
 
 <br><br>
 <a href="task-info-list"><button class="govuk-button" data-module="govuk-button">Back to task information page</button></a>

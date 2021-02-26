@@ -25,7 +25,7 @@
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
     <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Demo
+      Sandbox Version
     </strong>
     <span class="govuk-phase-banner__text">
       This is a demo sandbox version of the service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
@@ -42,17 +42,26 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        <span class="govuk-caption-l">Sandbox</span>
-        Do you want to remove this attribute?
+        <!-- <span class="govuk-caption-l">Sandbox</span> -->
+        Do you want to delete this attribute?
       </h1>
 
         <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Group
+            </dt>
+            <dd class="govuk-summary-list__value">
+              {{ data['attribute-group'] | default('Role')}}
+            </dd>
+
+          </div>
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
             Attribute name
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['attribute-name'] }}
+            {{ data['attribute-name'] | default('Decision maker')}}
           </dd>
 
         </div>
@@ -61,7 +70,7 @@
             Unique identifier
           </dt>
           <dd class="govuk-summary-list__value">
-            {{ data['attribute-uid'] }}
+          {{ data['attribute-uid'] | default('XXX XXXXX') }}
           </dd>
         </div>
 
@@ -95,7 +104,7 @@
         </div>
 
       <br>
-      <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      <button class="govuk-button" data-module="govuk-button">Continue</button>
 
       </form>
 
