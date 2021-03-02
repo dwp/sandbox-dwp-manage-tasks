@@ -1,0 +1,220 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Add payment details
+{% endblock %}
+
+
+{% block header %}
+<header class="govuk-header " role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-width-container">
+    <div>
+      <a href="/index-attributes-agentinfo-task-done" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__logotype">
+          <span class="govuk-header__logotype-text">
+            DWP Manage task
+          </span>
+        </span>
+      </a>
+      <br><br>
+      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
+        <nav>
+          <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="agent-landing">
+                My tasks
+              </a>
+            </li>
+
+            <li class="govuk-header__navigation-item ">
+              <a class="govuk-header__link" href="my-clearances">
+                My clearances
+              </a>
+            </li>
+
+          </ul>
+        </nav>
+    </div>
+  </div>
+</header>
+
+{% endblock %}
+
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Sandbox version
+    </strong>
+    <strong class="govuk-tag govuk-tag--orange">
+      Mockup
+    </strong>
+    <span class="govuk-phase-banner__text">
+      &nbsp; This is a mockup version of the service for sandbox.
+    </span>
+  </p>
+</div>
+<br>
+
+<div style="color:#ffffff; background-color:#1d70b8; ">
+<p style="color:#ffffff; padding:10px;"><strong>Mock-up version: </strong>Benefit agent's (Bluezone) journey for task completion </p>
+</div>
+
+<a class="govuk-back-link" href="verify-address">Back</a>
+
+
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Task information
+    </span>
+  </summary>
+  <!-- Task information - start -->
+
+
+  <dl class="govuk-summary-list">
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Task ID
+      </dt>
+      <dd class="govuk-summary-list__value">
+          DWP90090
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Date created
+      </dt>
+      <dd class="govuk-summary-list__value">
+          01/02/2021
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Status
+      </dt>
+      <dd class="govuk-summary-list__value">
+        <strong class="govuk-tag govuk-tag--green">
+          Active
+        </strong>
+      </dd>
+
+    </div>
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Subject
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Verify address given by claimant
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Priority
+      </dt>
+      <dd class="govuk-summary-list__value">
+        High
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Notes
+      </dt>
+      <dd class="govuk-summary-list__value">
+        Address to verify: 3 King Street Souh Shields NE33 1HT
+      </dd>
+
+    </div>
+
+    <div class="govuk-summary-list__row">
+      <dt class="govuk-summary-list__key">
+        Assigned by
+      </dt>
+      <dd class="govuk-summary-list__value">
+        System
+      </dd>
+
+    </div>
+
+
+  </dl>
+
+  <!-- Task information - end -->
+</details>
+
+<br>
+
+<!-- Main content start -->
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <dl class="govuk-summary-list">
+      <h1 class="govuk-heading-m">Verify address</h1>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          3 King Street Souh Shields NE33 1HT
+        </dd>
+      </div>
+    </dl>
+
+  </div>
+</div>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Find address</h1>
+      <!-- Form start -->
+
+
+            <form class="form " name="reason-form-2" action="bluezone-process-va-step2" onsubmit="return validateForm()" method="post">
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="property-number-name">
+                  Enter property number or name
+                </label>
+                <div id="sort-code-hint" class="govuk-hint">
+                  For example '122' or 'The castle meadows'
+                </div>
+                <input class="govuk-input govuk-input--width-20" id="property-number-name" name="property-number-name" type="text"  value ="{{data['property-number-name']}}"></div>
+
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="postcode-lookup-no">
+                    Enter Postcode
+                  </label>
+                  <div id="sort-code-hint" class="govuk-hint">
+                    Enter UK postcode. For example 'NE331HT' or 'NE33 1HT'
+                  </div>
+                  <input class="govuk-input govuk-input--width-10" id="postcode-lookup-no" name="postcode-lookup-no" type="text" value ="{{data['postcode-lookup-no']}}"></div>
+
+
+            <br>
+            <button class="govuk-button" data-module="govuk-button">Find address</button>
+
+
+
+
+
+            </form>
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

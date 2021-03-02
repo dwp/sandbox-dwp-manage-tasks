@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Add new payment details
+  Verify address
 {% endblock %}
 
 
@@ -45,11 +45,14 @@
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-tag--red">
-      Demo
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Sandbox version
+    </strong>
+    <strong class="govuk-tag govuk-tag--orange">
+      Mockup
     </strong>
     <span class="govuk-phase-banner__text">
-      &nbsp;Forms and elements in this sandbox are for demo purposes only.
+      &nbsp; This is a mockup version of the service for sandbox.
     </span>
   </p>
 </div>
@@ -62,13 +65,12 @@
 
 
 {% block content %}
-
 <!-- Task details -->
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Add payment details
+        Verify address
       </h1>
 
       <p></p>
@@ -76,10 +78,10 @@
       <dl class="govuk-summary-list">
         <div class="govuk-summary-list__row">
           <dt class="govuk-summary-list__key">
-            Task identifier
+            Task ID
           </dt>
           <dd class="govuk-summary-list__value">
-              DWP2929
+              DWP90090
           </dd>
 
         </div>
@@ -88,7 +90,7 @@
             Date created
           </dt>
           <dd class="govuk-summary-list__value">
-              28/01/2021
+              01/02/2021
           </dd>
 
         </div>
@@ -108,7 +110,7 @@
             Subject
           </dt>
           <dd class="govuk-summary-list__value">
-            Claimant name and bank details don't match.
+            Verify address given by claimant
           </dd>
 
         </div>
@@ -128,7 +130,7 @@
             Notes
           </dt>
           <dd class="govuk-summary-list__value">
-            Check with claimant and add new payment details to claimant account.
+            Address to verify: 3 King Street Souh Shields NE33 1HT
           </dd>
 
         </div>
@@ -147,7 +149,7 @@
       </dl>
 
       <br>
-      <a href="bluezone-process-ap"><button class="govuk-button" data-module="govuk-button">Start task </button></a>
+      <a href="bluezone-process-va"><button class="govuk-button" data-module="govuk-button">Start task </button></a>
 
       <br>      <br>
 

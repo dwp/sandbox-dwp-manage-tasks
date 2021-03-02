@@ -42,11 +42,14 @@
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-tag--red">
-      Demo
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+      Sandbox version
+    </strong>
+    <strong class="govuk-tag govuk-tag--orange">
+      Mockup
     </strong>
     <span class="govuk-phase-banner__text">
-      &nbsp;Forms and elements in this sandbox are for demo purposes only.
+      &nbsp; This is a mockup version of the service for sandbox.
     </span>
   </p>
 </div>
@@ -91,7 +94,7 @@
   </h2>
   <!-- Table to hold list of tasks -->
   <p>Get a new task and view task details</p><br>
-        <a href="task-landing" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
+        <a href="verify-address" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
           Get a task
           <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
             <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
@@ -101,68 +104,89 @@
 
 
                 <br><br>
-                <h2 class="govuk-heading-l">In progress (5)</h2>
+                <div class="govuk-tabs" data-module="govuk-tabs">
+              <h2 class="govuk-tabs__title">
+                Contents
+              </h2>
+              <ul class="govuk-tabs__list">
+                <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                  <a class="govuk-tabs__tab" href="#assigned-to-me">
+                    To-do (0)
+                  </a>
+                </li>
+                <li class="govuk-tabs__list-item ">
+                  <a class="govuk-tabs__tab" href="#in-progress">
+                    In progress (0)
+                  </a>
+                </li>
+
+
+              </ul>
+              <div class="govuk-tabs__panel" id="in-progress">
+                <h2 class="govuk-heading-l">In progress</h2>
                 <!-- Table to hold list of tasks -->
                 <table class="govuk-table">
                   <thead class="govuk-table__head">
                     <tr class="govuk-table__row">
-                      <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:37% !important;">Task</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:45% !important;">Task</th>
                       <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:10% !important;">Date parked</th>
-                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:20% !important;">Claimant name</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Claimant name</th>
                       <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:30% !important;">Reason for parking</th>
 
                     </tr>
                   </thead>
                   <tbody class="govuk-table__body">
                     <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#">Verify address</a></td>
-                      <td class="govuk-table__cell">02/01/2021</td>
-                      <td class="govuk-table__cell">Mark M</td>
-                      <td class="govuk-table__cell">Unknown system issue. </td>
+                      <td class="govuk-table__cell">No 'In progress' tasks</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell"> </td>
 
                     </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#">Verify address</a></td>
-                      <td class="govuk-table__cell">05/01/2021</td>
-                      <td class="govuk-table__cell">James May</td>
-                      <td class="govuk-table__cell">System error while adding details</td>
 
-
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#">Add payment details </a></td>
-                      <td class="govuk-table__cell">12/02/2021</td>
-                      <td class="govuk-table__cell">James May</td>
-                      <td class="govuk-table__cell">Claimant did not answer phone</td>
-
-
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#">Add payment details</a></td>
-                      <td class="govuk-table__cell">14/02/2021</td>
-                      <td class="govuk-table__cell">Andy K</td>
-                      <td class="govuk-table__cell">Claimant did not answer phone</td>
-
-
-                    </tr>
-                    <tr class="govuk-table__row">
-                      <td class="govuk-table__cell"><a href="#">Verify address</a></td>
-                      <td class="govuk-table__cell">16/02/2021</td>
-                      <td class="govuk-table__cell">Andrew Smith</td>
-                      <td class="govuk-table__cell">I was called away to talk to another team member</td>
-
-
-                    </tr>
 
 
                   </tbody>
                 </table>
                 <!-- Table to hold list of tasks -- END -->
 
+              </div>
+              <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="assigned-to-me">
+                <h2 class="govuk-heading-l">To-do</h2>
+                <!-- Table to hold list of tasks -->
+                <table class="govuk-table">
+                  <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:37% !important;">Task</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:10% !important;">Date assigned</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:20% !important;">Claimant name</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:20% !important;">Assigned by</th>
+                      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:17% !important;">Priority</th>
+                    </tr>
+                  </thead>
+                  <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                      <td class="govuk-table__cell">No tasks assigned</td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell"></td>
+                      <td class="govuk-table__cell"> </td>
+                      <td class="govuk-table__cell"> </td>
+
+
+                    </tr>
+
+
+
+                  </tbody>
+                </table>
+
+              </div>
+
+              </div>
 
 
         <br><br>
-
+<!-- 
         <details class="govuk-details" data-module="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
@@ -175,7 +199,7 @@
           <div class="govuk-details__text">
             <p class="govuk-heading-m">Use case </p> No concept of park or assign <a href="agent-landing-t1">No 'In progress' and 'To-do'</a>
           </div>
-        </details>
+        </details> -->
 
 
 </div>
