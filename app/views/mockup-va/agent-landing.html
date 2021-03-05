@@ -8,7 +8,7 @@
 <header class="govuk-header " role="banner" data-module="govuk-header">
   <div class="govuk-header__container govuk-width-container">
     <div>
-      <a href="/index-attributes-agentinfo-task-done" class="govuk-header__link govuk-header__link--homepage">
+      <a href="/index-pages" class="govuk-header__link govuk-header__link--homepage">
         <span class="govuk-header__logotype">
           <span class="govuk-header__logotype-text">
             DWP Manage task
@@ -16,23 +16,7 @@
         </span>
       </a>
       <br><br>
-      <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide navigation menu">Menu</button>
-        <nav>
-          <ul id="navigation" class="govuk-header__navigation  " aria-label="Navigation menu">
-            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
-              <a class="govuk-header__link" href="agent-landing">
-                My tasks
-              </a>
-            </li>
 
-            <li class="govuk-header__navigation-item ">
-              <a class="govuk-header__link" href="my-clearances">
-                My clearances
-              </a>
-            </li>
-
-          </ul>
-        </nav>
     </div>
   </div>
 </header>
@@ -42,12 +26,17 @@
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-phase-banner__content__tag">
-      Sandbox version
-    </strong>
     <strong class="govuk-tag govuk-tag--orange">
+      To be tested
+    </strong> &nbsp;
+    <strong class="govuk-tag govuk-tag--blue">
+      Sandbox version
+    </strong> &nbsp;
+    <strong class="govuk-tag govuk-tag--yellow">
       Mockup
     </strong>
+    &nbsp;
+
     <span class="govuk-phase-banner__text">
       &nbsp; This is a mockup version of the service for sandbox.
     </span>
@@ -84,99 +73,7 @@
         </a>
         <br><br>
 
-  <div class="govuk-tabs" data-module="govuk-tabs">
-<h2 class="govuk-tabs__title">
-  Contents
-</h2>
-<ul class="govuk-tabs__list">
-  <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-    <a class="govuk-tabs__tab" href="#assigned-to-me">
-      To-do (0)
-    </a>
-  </li>
-  <li class="govuk-tabs__list-item ">
-    <a class="govuk-tabs__tab" href="#in-progress">
-      In progress (0)
-    </a>
-  </li>
 
-
-</ul>
-<div class="govuk-tabs__panel" id="in-progress">
-  <h2 class="govuk-heading-l">In progress</h2>
-  <!-- Table to hold list of tasks -->
-  <table class="govuk-table">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:45% !important;">Task</th>
-        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:10% !important;">Date parked</th>
-        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:15% !important;">Claimant name</th>
-        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:30% !important;">Reason for parking</th>
-
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">No 'In progress' tasks</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell"> </td>
-
-      </tr>
-
-
-
-    </tbody>
-  </table>
-  <!-- Table to hold list of tasks -- END -->
-
-</div>
-<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="assigned-to-me">
-  <h2 class="govuk-heading-l">To-do</h2>
-  <!-- Table to hold list of tasks -->
-  <table class="govuk-table">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header govuk-!-width-one-half" style="width:37% !important;">Task</th>
-        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:10% !important;">Date assigned</th>
-        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:20% !important;">Claimant name</th>
-        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:20% !important;">Assigned by</th>
-        <th scope="col" class="govuk-table__header govuk-!-width-one-quarter" style="width:17% !important;">Priority</th>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <td class="govuk-table__cell">No tasks assigned</td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell"> </td>
-        <td class="govuk-table__cell"> </td>
-
-
-      </tr>
-
-
-
-    </tbody>
-  </table>
-
-</div>
-
-</div>
-<!-- 
-<details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Alternate page view
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    <p class="govuk-heading-m">Use case </p> When there are tasks in 'In progress' <a href="agent-landing">Tasks 'In progress'</a>
-  </div>
-  <div class="govuk-details__text">
-    <p class="govuk-heading-m">Use case </p> No concept of park or assign <a href="agent-landing-t1">No 'In progress' and 'To-do'</a>
-  </div>
-</details> -->
 
 </div>
 

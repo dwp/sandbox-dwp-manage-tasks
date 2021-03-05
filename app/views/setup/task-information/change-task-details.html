@@ -67,13 +67,15 @@
           <br>
           <div class="govuk-form-group">
             <label class="govuk-label" for="task-id">
-              Enter task identifier
+              Citizen ID
             </label>
+            <p class="govuk-hint">This is the unique Citizen ID  (NiNo) for the task you are creating. </p>
+
             <input class="govuk-input govuk-!-width-two-thirds" id="task-id" name="task-id" type="text" value="{{ data['task-id'] | default('XXX XXX XXX') }}"></div>
 
         <div class="govuk-form-group">
           <label class="govuk-label" for="task-name">
-            Enter task name
+             Task name
           </label>
           <p class="govuk-hint">For example 'Verify address' or 'Add new payment details' </p>
 
@@ -81,20 +83,27 @@
 
           <div class="govuk-form-group">
             <label class="govuk-label" for="task-domain">
-              Enter domain
+               Domain
             </label>
             <p class="govuk-hint">This is the domain name of your benefit. </p>
             <input class="govuk-input govuk-!-width-two-thirds" id="task-domain" name="task-domain" type="text" value="{{ data['task-domain'] | default('Winter fuel') }}" ></div>
 
             <div class="govuk-form-group">
+              <label class="govuk-label" for="task-url">
+                URL
+              </label>
+              <p class="govuk-hint"> This is the URL of where the task can be done.</p>
+              <input class="govuk-input" id="task-url" name="task-url" type="text"value="{{ data['task-url'] | default('https://url-task-internal-for-agent.dwp.gov.uk') }}" ></div>
+
+            <div class="govuk-form-group">
               <label class="govuk-label" for="task-priority">
-                Enter priority
+                 Priority
               </label>
               <p class="govuk-hint">Prority for this task </p>
               <input class="govuk-input govuk-!-width-one-third" id="task-priority" name="task-priority" type="text" value="{{ data['task-priority'] | default('High') }}"></div>
             <div class="govuk-form-group">
               <label class="govuk-label" for="task-subject">
-                Enter subject
+                Subject
               </label>
               <p class="govuk-hint"> </p>
               <input class="govuk-input" id="task-subjecte" name="task-subject" type="text" value="{{ data['task-subject'] | default('Winter fuel') }}" ></div>

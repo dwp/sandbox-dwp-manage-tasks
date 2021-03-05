@@ -71,6 +71,8 @@
             <label class="govuk-label" for="attribute-group">
               Group
             </label>
+            <p class="govuk-hint">This is the group or type where this attribute belongs to. For example 'role' or 'location'</p>
+
             <input class="govuk-input govuk-!-width-two-thirds" id="attribute-group" name="attribute-group" type="text" value="{{ data['attribute-group'] | default('Role')}}"></div>
 
 
@@ -78,15 +80,17 @@
           <label class="govuk-label" for="attribute-name">
             Attribute name
           </label>
+          <p class="govuk-hint">This could be the role or any other unique matching attribute. For example 'decision maker'.</p>
+
           <input class="govuk-input" id="attribute-name" name="attribute-name" type="text" value="{{ data['attribute-name'] | default('Decision maker') }}"></div>
 
 
-
+<!--
         <div class="govuk-form-group">
           <label class="govuk-label" for="attribute-uid">
             Unique identifier
           </label>
-          <input class="govuk-input govuk-!-width-two-thirds" id="attribute-uid" name="attribute-uid" type="text" value="{{ data['attribute-uid'] | default('XXX XXXXX') }}"></div>
+          <input class="govuk-input govuk-!-width-two-thirds" id="attribute-uid" name="attribute-uid" type="text" value="{{ data['attribute-uid'] | default('XXX XXXXX') }}"></div> -->
 
 
 

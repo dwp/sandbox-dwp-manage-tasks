@@ -25,9 +25,17 @@
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
-    <strong class="govuk-tag govuk-tag--red">
+    <strong class="govuk-tag govuk-tag--orange">
+      To be tested
+    </strong> &nbsp;
+    <strong class="govuk-tag govuk-tag--blue">
+      Sandbox version
+    </strong> &nbsp;
+    <strong class="govuk-tag govuk-tag--yellow">
       Demo
     </strong>
+    &nbsp;
+
     <span class="govuk-phase-banner__text">
       &nbsp;Forms and elements in this sandbox are for demo purposes only.
     </span>
@@ -37,7 +45,7 @@
 <div class="govuk-breadcrumbs govuk-breadcrumbs--collapse-on-mobile">
 <ol class="govuk-breadcrumbs__list">
   <li class="govuk-breadcrumbs__list-item">
-    <a class="govuk-breadcrumbs__link" href="/index-attributes-agentinfo-task-done">Home</a>
+    <a class="govuk-breadcrumbs__link" href="/index-pages">Home</a>
   </li>
   <li class="govuk-breadcrumbs__list-item">
     <a class="govuk-breadcrumbs__link" href="#">Agent interface examples</a>
@@ -53,15 +61,17 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-xl">
-        <p class="govuk-caption-l" style="margin-bottom:0px;">Sandbox</p>Agent interface examples
-
+        <p class="govuk-caption-l" style="margin-bottom:0px;">
+        <strong class="govuk-tag govuk-tag--orange">
+          To be tested </strong> <br><br>Sandbox &nbsp; </p>
+         Agent interface examples
       </h1>
 
-      <div class="govuk-inset-text">
-      <p><strong>For demo only</strong></p> <p>Interface matching is done in the backend based on agent authentication and profile</p>
-      </div>
       <br>
-
+      <h1 class="govuk-heading-m">
+        View matched tasks for agents
+      </h1>
+      <br>
       <table class="govuk-table">
     <thead class="govuk-table__head">
     <tr class="govuk-table__row">
@@ -104,6 +114,10 @@
   </tbody>
 </table>
 
+  <br>
+      <div class="govuk-inset-text">
+      <p><strong>Task matching </strong></p> <p>Interface matching is done in the backend based on agent authentication and profile</p>
+      </div>
     </div>
   </div>
 
